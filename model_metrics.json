@@ -1,0 +1,11 @@
+{
+  "r2_log_scale": 0.8615,
+  "r2_dollar_scale": 0.8776,
+  "rmse_dollars": 4359.22,
+  "mae_dollars": 1932.28,
+  "cv_r2_mean": 0.8134,
+  "cv_r2_std": 0.0218,
+  "n_features": 16,
+  "train_size": 1070,
+  "test_size": 268
+}
