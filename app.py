@@ -184,9 +184,11 @@ header    { visibility: hidden; }
 @st.cache_resource
 def load_artifacts():
     load_dotenv()
-    if "GROQ_API_KEY" in st.secrets:
+    try:
         os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
-    model          = joblib.load('insurance_risk_model.pkl')
+    except Exception:
+        pass
+    model  = joblib.load('insurance_risk_model.pkl')
     label_encoders = joblib.load('label_encoders.pkl')
     with open('features.json') as f:
         features = json.load(f)
