@@ -184,16 +184,19 @@ header    { visibility: hidden; }
 @st.cache_resource
 def load_artifacts():
     load_dotenv()
+
+    # Get API key — works both locally (.env) and on Streamlit Cloud (secrets)
     try:
-        os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
+        api_key = st.secrets["GROQ_API_KEY"]
     except Exception:
-        pass
-    model  = joblib.load('insurance_risk_model.pkl')
+        api_key = os.getenv("GROQ_API_KEY")
+
+    model          = joblib.load('insurance_risk_model.pkl')
     label_encoders = joblib.load('label_encoders.pkl')
     with open('features.json') as f:
         features = json.load(f)
     explainer = shap.TreeExplainer(model)
-    client    = Groq(api_key=os.getenv('GROQ_API_KEY'))
+    client    = Groq(api_key=api_key)
     return model, label_encoders, features, explainer, client
 
 model, label_encoders, FEATURES, explainer, groq_client = load_artifacts()
