@@ -3,7 +3,7 @@
 An AI-powered insurance risk assessment tool built with XGBoost, SHAP explainability, and Llama 3.3-70b via Groq.
 
 ## 🚀 Live Demo
-<!-- https://insurance-risk-advisor-ecmby3rntyfatawmqd43mb.streamlit.app -->
+ https://insurance-risk-advisor-ecmby3rntyfatawmqd43mb.streamlit.app 
 
 ## 📌 What It Does
 - Predicts your estimated annual insurance premium using a trained XGBoost model
