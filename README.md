@@ -43,7 +43,7 @@ streamlit run app.py
 ```
 
 ## 📁 Project Structure
-
+```
 insurance-risk-advisor/
 ├── app.py                  # Main Streamlit entrypoint (UI only)
 ├── requirements.txt        # Python dependencies
@@ -60,9 +60,10 @@ insurance-risk-advisor/
 ├── models/                 # .pkl files (gitignored — see below)
 ├── assets/                 # EDA and model evaluation charts
 └── notebooks/
-├── 01_eda.ipynb
-├── 02_feature_engineering_model.ipynb
-└── 03_llm_integration_groq.ipynb
+    ├── 01_eda.ipynb
+    ├── 02_feature_engineering_model.ipynb
+    └── 03_llm_integration_groq.ipynb
+```
 
 ## 🔒 Model Files
 The `.pkl` model files are not committed to this repo.
